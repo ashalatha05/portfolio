@@ -1,50 +1,226 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
 <head>
-<title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashalatha — Developer</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<!-- Cursor trail canvas -->
+<canvas id="trail-canvas"></canvas>
+<!-- Custom cursor -->
+<div id="cursor"></div>
+<div id="cursor-dot"></div>
+
+<!-- NAV -->
 <nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Skills</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
+  <div class="nav-logo">AL.</div>
+  <ul class="nav-ul" id="navUl">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="icon-btn" id="soundBtn" title="Sound">🔇</button>
+    <button class="icon-btn" id="themeBtn" title="Dark Mode">🌙</button>
+    <a href="resume.pdf" download class="nav-cv">CV ↓</a>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<h1>Ashalatha</h1>
+<!-- Mobile overlay menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <ul>
+    <li><a href="#home"     class="mm-link">Home</a></li>
+    <li><a href="#about"    class="mm-link">About</a></li>
+    <li><a href="#skills"   class="mm-link">Skills</a></li>
+    <li><a href="#projects" class="mm-link">Projects</a></li>
+    <li><a href="#contact"  class="mm-link">Contact</a></li>
+  </ul>
+  <a href="resume.pdf" download class="mm-cv">Download CV ↓</a>
+</div>
 
-<img src="image.jpg" width="200">
-<p>B.Tech CSE Student | Aspiring Software Developer</p>
-
-<section>
-<h2>About Me</h2>
-<p>I am a Computer Science student interested in web development and programming.</p>
+<!-- HOME -->
+<section id="home">
+  <div class="home-wrap">
+    <div class="eyebrow"><span class="live-dot"></span> Available for Internships</div>
+    <h1 class="big-name">
+      <span class="nm-line" data-depth="0.02">PATHIVADA</span>
+      <span class="nm-line italic" data-depth="0.05">ASHA</span>
+      <span class="nm-line stroke" data-depth="0.03">LATHA.</span>
+    </h1>
+    <div class="home-bottom">
+      <div class="home-role"><span id="typed"></span><span class="blink">_</span></div>
+      <p class="home-desc">B.Tech CSE · Raghu Engineering College<br>Building real things with Python, Java &amp; the web.</p>
+      <div class="home-btns">
+        <a href="#projects" class="btn-raw">See Work →</a>
+        <a href="#contact" class="btn-outline">Talk to me</a>
+      </div>
+    </div>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span>PYTHON &nbsp;·&nbsp; JAVA &nbsp;·&nbsp; C &nbsp;·&nbsp; OPENCV &nbsp;·&nbsp; AWS &nbsp;·&nbsp; HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; FULL STACK &nbsp;·&nbsp; DATA ANALYTICS &nbsp;·&nbsp;</span>
+      <span>PYTHON &nbsp;·&nbsp; JAVA &nbsp;·&nbsp; C &nbsp;·&nbsp; OPENCV &nbsp;·&nbsp; AWS &nbsp;·&nbsp; HTML &nbsp;·&nbsp; CSS &nbsp;·&nbsp; FULL STACK &nbsp;·&nbsp; DATA ANALYTICS &nbsp;·&nbsp;</span>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>Skills</h2>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>Python</li>
-<li>C Programming</li>
-</ul>
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-num">01</div>
+  <div class="about-wrap">
+    <div class="about-left">
+      <h2 class="sec-title">About<br><em>Me.</em></h2>
+      <div class="about-tag">B.Tech CSE · 2027</div>
+    </div>
+    <div class="about-right">
+      <p>Started with <strong>C programming</strong> — fascinated by how computers think at a low level.</p>
+      <p>Then came <strong>Python</strong>, which opened doors to OpenCV, machine learning, and full stack development.</p>
+      <p>Completed a <strong>Full Stack Python Internship with AICTE</strong> and earned an <strong>AWS Certification with Badge</strong>.</p>
+      <p>Currently learning <strong>Data Analytics</strong> — building real things, not just theory.</p>
+      <div class="stats-row">
+        <div class="stat tilt-card"><big>9.07</big><small>CGPA</small></div>
+        <div class="stat tilt-card"><big>2+</big><small>Projects</small></div>
+        <div class="stat tilt-card"><big>4+</big><small>Certs</small></div>
+        <div class="stat tilt-card"><big>2027</big><small>Grad</small></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>Projects</h2>
-<p> Personal Portfolio Website</p>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sec-num">02</div>
+  <h2 class="sec-title">Skills.</h2>
+  <div class="skills-list">
+    <div class="skill-row tilt-card"><span class="sk-name">Python</span><div class="sk-track"><div class="sk-fill" data-w="80"></div></div><span class="sk-pct">80%</span></div>
+    <div class="skill-row tilt-card"><span class="sk-name">Java</span><div class="sk-track"><div class="sk-fill" data-w="65"></div></div><span class="sk-pct">65%</span></div>
+    <div class="skill-row tilt-card"><span class="sk-name">C Programming</span><div class="sk-track"><div class="sk-fill" data-w="70"></div></div><span class="sk-pct">70%</span></div>
+    <div class="skill-row tilt-card"><span class="sk-name">HTML &amp; CSS</span><div class="sk-track"><div class="sk-fill" data-w="75"></div></div><span class="sk-pct">75%</span></div>
+    <div class="skill-row tilt-card"><span class="sk-name">AWS Cloud</span><div class="sk-track"><div class="sk-fill" data-w="60"></div></div><span class="sk-pct">60%</span></div>
+    <div class="skill-row tilt-card"><span class="sk-name">Data Analytics</span><div class="sk-track"><div class="sk-fill" data-w="40"></div></div><span class="sk-pct">40%↑</span></div>
+  </div>
 </section>
 
-<section>
-<h2>Contact</h2>
-<p>Email: ashalathapathivada@gmail.com</p>
-<p>GitHub: github.com/ashalatha05</p>
-<p>LinkedIn: https://www.linkedin.com/in/ashalatha-pathivada-014501360/</p>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="sec-num">03</div>
+  <h2 class="sec-title">Projects.</h2>
+  <div class="proj-list">
+    <div class="proj-item tilt-card">
+      <div class="proj-top"><span class="proj-idx">01 /</span><a href="https://github.com/ashalatha05" target="_blank" class="proj-gh">GitHub ↗</a></div>
+      <h3 class="proj-name">Personal Portfolio<br>Website.</h3>
+      <p class="proj-desc">Responsive developer portfolio built from scratch. Clean brutalist layout showcasing skills and projects professionally.</p>
+      <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+    </div>
+    <div class="proj-item tilt-card">
+      <div class="proj-top"><span class="proj-idx">02 /</span><a href="https://github.com/ashalatha05" target="_blank" class="proj-gh">GitHub ↗</a></div>
+      <h3 class="proj-name">Face Recognition<br>System.</h3>
+      <p class="proj-desc">Real-time face detection using Python and OpenCV. Haar Cascade classifiers with live webcam input for accurate identification.</p>
+      <div class="proj-tags"><span>Python</span><span>OpenCV</span><span>ML</span></div>
+    </div>
+  </div>
 </section>
 
-</body>
-</html>
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="sec-num">04</div>
+  <h2 class="sec-title">Certs.</h2>
+  <div class="cert-list">
+
+    <div class="cert-item tilt-card">
+      <div class="cert-icon">🐍</div>
+      <div class="cert-info">
+        <div class="cert-name">Full Stack Python</div>
+        <div class="cert-issuer">AICTE</div>
+      </div>
+      <div class="cert-badge">Completed</div>
+    </div>
+
+    <div class="cert-item tilt-card">
+      <div class="cert-icon">📊</div>
+      <div class="cert-info">
+        <div class="cert-name">DBMS</div>
+        <div class="cert-issuer">NPTEL</div>
+      </div>
+      <div class="cert-badge">Certified</div>
+    </div>
+
+    <div class="cert-item tilt-card">
+      <div class="cert-icon">⚡</div>
+      <div class="cert-info">
+        <div class="cert-name">Software Engineering Job Simulation</div>
+        <div class="cert-issuer">Accenture Forage</div>
+      </div>
+      <div class="cert-badge">Completed</div>
+    </div>
+
+    <div class="cert-item tilt-card">
+      <div class="cert-icon">☁️</div>
+      <div class="cert-info">
+        <div class="cert-name">AWS Certification</div>
+        <div class="cert-issuer">Amazon Web Services</div>
+      </div>
+      <div class="cert-badge cert-badge--hot">With Badge ✦</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROFILES -->
+<section id="profiles">
+  <div class="sec-num">05</div>
+  <h2 class="sec-title">Find Me.</h2>
+  <div class="profiles-list">
+    <a href="https://github.com/ashalatha05" target="_blank" class="pf-row tilt-card">
+      <span class="pf-platform">GitHub</span><span class="pf-handle">ashalatha05</span><span class="pf-arr">↗</span>
+    </a>
+    <a href="https://www.linkedin.com/in/ashalatha-pathivada-014501360" target="_blank" class="pf-row tilt-card">
+      <span class="pf-platform">LinkedIn</span><span class="pf-handle">ashalatha-pathivada</span><span class="pf-arr">↗</span>
+    </a>
+    <a href="https://www.codechef.com" target="_blank" class="pf-row tilt-card">
+      <span class="pf-platform">CodeChef</span><span class="pf-handle">ashalatha05</span><span class="pf-arr">↗</span>
+    </a>
+  </div>
+  <div class="resume-row tilt-card">
+    <div><strong>Resume / CV</strong><p>Full profile — education, skills, certifications.</p></div>
+    <a href="resume.pdf" download class="btn-raw">Download ↓</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-num">06</div>
+  <h2 class="sec-title contact-giant">Let's<br><em>Talk.</em></h2>
+  <div class="contact-wrap">
+    <div class="contact-left">
+      <a href="/cdn-cgi/l/email-protection#5e3f2d363f323f2a363f2e3f2a3637283f3a3f1e39333f3732703d3133" class="c-link tilt-card">
+        <span class="cl-label">Email</span><span class="cl-val"><span class="__cf_email__" data-cfemail="8decfee5ece1ecf9e5ecfdecf9e5e4fbece9eccdeae0ece4e1a3eee2e0">[email&#160;protected]</span> ↗</span>
+      </a>
+      <a href="https://github.com/ashalatha05" target="_blank" class="c-link tilt-card">
+        <span class="cl-label">GitHub</span><span class="cl-val">github.com/ashalatha05 ↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/ashalatha-pathivada-014501360" target="_blank" class="c-link tilt-card">
+        <span class="cl-label">LinkedIn</span><span class="cl-val">ashalatha-pathivada ↗</span>
+      </a>
+    </div>
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <div class="cf-field"><label>Name</label><input type="text" placeholder="Your name" required></div>
+      <div class="cf-field"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+      <div class="cf-field"><label>Message</label><textarea placeholder="What's on your mind?" required></textarea></div>
+      <button type="submit" class="btn-raw full">Send It →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <span
